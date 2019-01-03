@@ -32,7 +32,7 @@ authorsredditwingsffxiv = redditwingsffxiv.groupby('Author').Author.count().rese
 frames = [botspam,general,offtopic,spoilers,artworkandmusic,newupcoming,offtopicspoilers,questions,redditwingsffxiv]
 csv = pd.concat(frames)
 rows = csv.shape[0]
-#And then the top 25 of the master dataframe
+#And then the top 30 of the master dataframe
 authors = csv.groupby('Author').Author.count().reset_index(name='count').sort_values(['count'], ascending=False).head(30)
 
 #MESSAGE GRAPH
